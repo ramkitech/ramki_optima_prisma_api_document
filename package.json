@@ -1,0 +1,80 @@
+{
+  "name": "ramki_optima_api_document",
+  "version": "1.0.0",
+  "description": "Reusable API SDK built with NestJS, Prisma, Axios, and Zod for railway_patrolman_tracking frontends.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": "https://ACV_TECT@bitbucket.org/acv-projects/railway_patrolman_tracking_api_document",
+  "bugs": "https://ACV_TECT@bitbucket.org/acv-projects/railway_patrolman_tracking_api_document/issues",
+  "homepage": "https://ACV_TECT@bitbucket.org/acv-projects/railway_patrolman_tracking_api_document#readme",
+  "keywords": [
+    "nestjs",
+    "prisma",
+    "sdk",
+    "api",
+    "axios",
+    "zod",
+    "typescript",
+    "frontend",
+    "react",
+    "nextjs"
+  ],
+  "author": "ACVTech",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./services/*": {
+      "import": "./dist/services/*",
+      "require": "./dist/services/*"
+    },
+    "./core/*": {
+      "import": "./dist/core/*",
+      "require": "./dist/core/*"
+    },
+    "./zod_utils/*": {
+      "import": "./dist/zod_utils/*",
+      "require": "./dist/zod_utils/*"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "services/*": [
+        "dist/services/*"
+      ],
+      "core/*": [
+        "dist/core/*"
+      ],
+      "zod_utils/*": [
+        "dist/zod_utils/*"
+      ]
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.31.0",
+    "eslint-config-next": "^15.4.3",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
